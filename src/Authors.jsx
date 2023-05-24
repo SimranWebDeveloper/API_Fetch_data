@@ -10,7 +10,10 @@ const Authors = () => {
     
 
     useEffect(()=>{
-        axios.get('https://example-data.draftbit.com/authors?_limit=10')
+      // my created data
+        axios.get('http://127.0.0.1:5500/src/data/myData.json')
+        // browser daata
+        // axios.get('https://example-data.draftbit.com/authors?_limit=10')
         .then(res=>{
             console.log(res.data)
             setdata(res.data)
